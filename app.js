@@ -12,7 +12,7 @@ apiRouter.use(projectRouter);
 
 
 
-app.use(express.static('../client'));
+app.use(express.static('./client'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
