@@ -19,6 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', apiRouter);
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || "80.209.137.198" || 3000, () => {
   console.log(`PSA Server is listening on port ${PORT}`)
 })
