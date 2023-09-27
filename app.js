@@ -12,13 +12,13 @@ apiRouter.use(projectRouter);
 
 
 
-app.use(express.static('../client'));
+app.use(express.static('./client'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', apiRouter);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || "80.209.137.198" || 3000, () => {
   console.log(`PSA Server is listening on port ${PORT}`)
 })
