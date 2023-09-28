@@ -1,10 +1,14 @@
 const express = require('express');
-const { User } = require('../database/models');
+// const { User } = require('../database/models');
+const db  = require('../database/models');
+
 const { authenticationRequired } = require('../middlewares');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 const userRouter = express.Router();
+
+const { User } = db; 
 
 
 //Sign up route:
