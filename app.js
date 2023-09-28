@@ -3,7 +3,7 @@ const { authRouter, userRouter, projectRouter } = require('./routes');
 
 
 const app = express()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 
 const apiRouter = express.Router();
 apiRouter.use(authRouter);
