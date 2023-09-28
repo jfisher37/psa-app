@@ -37,6 +37,8 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+console.log('Config', config);
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
