@@ -1,12 +1,18 @@
-const { Client } = require('pg');
-
-// Retrieve the connection string from an environment variable
-const connectionString = process.env.DATABASE_URL;
-
-const client = new Client({
-  connectionString: connectionString,
-  ssl: { rejectUnauthorized: false },
-  dialect: 'postgres'
-});
-
-module.exports = client;
+module.exports = {
+  development: {
+    database: 'PSA',
+    url: process.env.DEV_DATABASE_URL,
+    dialect: 'postgres',
+    ssl: { rejectUnauthorized: false },
+  },
+  test: {
+    url: process.env.TEST_DATABASE_URL,
+    dialect: 'postgres',
+    ssl: { rejectUnauthorized: false },
+  },
+  production: {
+    url: process.env.DATABASE_URL,
+    dialect: 'postgres',
+    ssl: { rejectUnauthorized: false },
+  },
+}
