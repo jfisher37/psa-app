@@ -10,7 +10,7 @@ apiRouter.use(authRouter);
 apiRouter.use(userRouter);
 apiRouter.use(projectRouter);
 
-
+console.log('AUTH ROUTER', authRouter);
 
 app.use(express.static('./client'));
 
