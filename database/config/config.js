@@ -1,16 +1,19 @@
 module.exports = {
   development: {
-    database: 'PSA',
-    url: process.env.DEV_DATABASE_URL,
+    database: 'd15s5fre8di9dg',
+    url: process.env.DATABASE_URL,
     dialect: 'postgres',
     ssl: { rejectUnauthorized: false },
   },
   test: {
-    url: process.env.TEST_DATABASE_URL,
+    database: 'd15s5fre8di9dg',
+    url: process.env.DATABASE_URL,
     dialect: 'postgres',
-    ssl: { rejectUnauthorized: false },
+    ssl: { 
+      rejectUnauthorized: false },
   },
   production: {
+    database: 'd15s5fre8di9dg',
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     ssl: { rejectUnauthorized: false },
