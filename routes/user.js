@@ -14,6 +14,7 @@ userRouter.post('/signup/', async (req, res) => {
   const email = req.body.email.toLowerCase();
   const { password } = req.body;
 
+  console.log('SIGNUP', req.body);
 
   // Make sure password isn't too long
   if (new Blob([password]).size > 4096) {
