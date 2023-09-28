@@ -1,17 +1,11 @@
-// require('dotenv').config()
+const { Client } = require('pg');
 
-module.exports = {
-  development: {
-    database: 'PSA',
-    url: process.env.DEV_DATABASE_URL,
-    dialect: 'postgres',
-  },
-  test: {
-    url: process.env.TEST_DATABASE_URL,
-    dialect: 'postgres',
-  },
-  production: {
-    url: process.env.DATABASE_URL,
-    dialect: 'postgres',
-  },
-}
+// Retrieve the connection string from an environment variable
+const connectionString = process.env.DATABASE_URL;
+
+const client = new Client({
+  connectionString: connectionString,
+  ssl: { rejectUnauthorized: false }
+});
+
+module.exports = client;
