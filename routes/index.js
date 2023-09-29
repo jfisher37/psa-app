@@ -1,4 +1,6 @@
 const { authRouter } = require('./auth');
 const { userRouter } = require('./user');
 const { projectRouter } = require('./project');
-module.exports = {  authRouter, userRouter, projectRouter };
+const { mainPageRouter } = require('./mainPage');
+const { partnerRouter } = require('./partner');
+module.exports = {  authRouter, userRouter, projectRouter, mainPageRouter, partnerRouter };
