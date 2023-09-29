@@ -1,6 +1,5 @@
 module.exports = {
   development: {
-    database: 'PSA',
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     dialectOptions: {
@@ -10,7 +9,6 @@ module.exports = {
     }
   },
   test: {
-    database: 'd15s5fre8di9dg',
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     dialectOptions: {
@@ -20,7 +18,6 @@ module.exports = {
     }
   },
   production: {
-    database: 'd15s5fre8di9dg',
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     dialectOptions: {
