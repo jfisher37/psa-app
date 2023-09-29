@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    database: 'd15s5fre8di9dg',
+    database: 'PSA',
     url: process.env.DATABASE_URL,
     dialect: 'postgres',
     ssl: { rejectUnauthorized: false },

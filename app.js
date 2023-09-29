@@ -1,14 +1,16 @@
 const express = require('express');
-const { authRouter, userRouter, projectRouter } = require('./routes');
+const { authRouter, userRouter, projectRouter, mainPageRouter, partnerRouter } = require('./routes');
 
 
 const app = express()
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 const apiRouter = express.Router();
 apiRouter.use(authRouter);
 apiRouter.use(userRouter);
 apiRouter.use(projectRouter);
+apiRouter.use(mainPageRouter);
+apiRouter.use(partnerRouter);
 
 app.use(express.static('./client'));
 
