@@ -19,6 +19,11 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
 });
 
 client.dialect = 'postgres';
+client.dialectOptions = {
+  ssl: { 
+    require: true,
+    rejectUnauthorized: false },
+}
 
 
 module.exports = {
