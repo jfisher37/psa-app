@@ -42,7 +42,5 @@ module.exports = {
         rejectUnauthorized: false },
     }
   },
-  production: {
-    client: client
-  },
+  production: client
 }
