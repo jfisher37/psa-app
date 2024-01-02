@@ -15,7 +15,14 @@ console.log("Config", config);
 let sequelize;
 
 if (env === "production") {
-  sequelize = new Sequelize(config.url);
+  sequelize = new Sequelize(config.url, {
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
+  });
 } else {
   if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable], config);
